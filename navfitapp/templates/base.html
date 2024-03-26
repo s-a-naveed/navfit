@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVFIT | {% block title %}{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static '/base.css' %}">
+    <link rel="stylesheet" href="{% static '/home.css' %}">
+    <link rel="stylesheet" href="{% static '/blog.css' %}">
+    <link rel="stylesheet" href="{% static '/plans.css' %}">
+    <link rel="stylesheet" href="{% static '/about.css' %}">
+    <link rel="stylesheet" href="{% static '/contactus.css' %}">
+</head>
+<body class='basebody'>
+    <header>
+        <nav class='basenav'>
+            <a href="{% url 'home' %}" class='alogo'><img src="{% static 'images/logo.jpg' %}" alt="NAVFIT"></a>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'plans' %}">Plans</a>
+            <a href="{% url 'aboutus' %}">About Us</a>
+            <a href="{% url 'contactus' %}">Contact Us</a>
+            <a href="{% url 'login' %}">Login</a>
+        </nav>
+        <h1 id='baseh1'>NAVFIT</h1>
+        <p id='basep'>THE BODY ACHIEVES WHAT THE MIND BELIEVES.</p>
+    </header>
+    <main>
+        {% block content %}{% endblock content %}
+    </main>
+</body>
+</html>

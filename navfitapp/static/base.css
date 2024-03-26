@@ -1,0 +1,66 @@
+/* base.css */
+.basenav {
+    margin-top: 0px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+a {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-size: 35px;
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    color: tomato;
+}
+
+#baseh1 {
+    margin-top: -20px;
+    color: red;
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 600%;
+}
+
+#basep {
+    margin-top: -80px;
+    text-align: center;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+    font-weight: bold;
+    font-size: large;
+}
+
+.basebody {
+    background-image: url('../static/images/bg.jpg');
+    /* background-color: aqua; */
+    background-size: cover; /* Adjust as needed */
+    background-repeat: no-repeat;
+    /* Additional background properties can be added as needed */
+}
+
+
+/* home.css */
+@media screen and (max-width: 768px) {
+    .basenav {
+        flex-direction: column;
+    }
+    .basenav a {
+        margin-bottom: 10px;
+    }
+    #baseh1 {
+        font-size: 300%; /* Adjust as needed */
+    }
+    #basep {
+        font-size: medium; /* Adjust as needed */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    a {
+        font-size: 20px; /* Adjust as needed */
+    }
+}

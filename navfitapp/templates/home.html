@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+ Home
+{% endblock title %}
+
+{% block content %}
+<pre id='basemainid'>    Welcome to NavFit, your ultimate fitness destination.
+    Explore our state-of-the-art facilities, expert trainers,
+    diverse classes,and personalized plans for a healthier, stronger you. 
+    Join us today!</pre>
+    <form action="{% url 'register' %}">
+    <button type="submit" id= 'register'>Register Now</button>
+    </form>
+{% endblock content %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NAVFIT | Login</title>
+    <link rel="stylesheet" href="{% static '/login.css' %}">
+</head> 
+<body>
+    <div class="container">
+    <form action="" method="POST">
+        <h1>LOGIN</h1>
+        {% csrf_token %}
+        {% for fm in form %}
+        {{fm.label_tag}} {{fm}} <br><br>
+        {% endfor %}
+        {% if messages %}
+        {% for message in messages %}
+        <span {% if message.tags %} class = "{{message.tags}}" {% endif %}>
+        {{message}}
+        {% endfor %}</span>
+        {% endif %}
+        <input type="submit" value="Login">
+    </form> <br>
+    <label>New User</label> <a href="{% url 'register' %}">Register here!</a>
+    <a href="/" class='backtohome'>Back to home</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/register.css' %}">
+    <title>NAVFIT | Register</title>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Registration Form</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {% for fm in form %}
+            {{fm.label_tag}} {{fm}}{% if fm.errors %}{% for error in fm.errors %}<span {% if error %} class="error-message" {% endif %} >{{error}}{% endfor %}</span>{% endif %} <br><br>
+            {% endfor %}
+            <input type="submit" value="Register">
+        </form>
+        <p>Already Registered? <a href="{% url 'login' %}">Login here</a> <a href="/" class='backtohome'>Back to home</a></p>
+    </div>
+</body>
+</html>
